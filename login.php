@@ -6,15 +6,23 @@ $pas = "";
 
 if($_POST){
     $user = $_POST['usuario'];
-    $pas = $_POST['clave'];}
-    elseif($usuario != $user){
-        echo "Usuario incorrecto";}
-    elseif($pass != $pas){
-        echo "Contraseña incorrecta";}
-if ($usuario== $user && $pass== $pas){
-    header('location:exito.php');
+    $pas = $_POST['clave'];
+}
+if($usuario == $user && $pass == $pas){
+    header ('location:exito.php');
     exit;
 }
+
+
+if ($usuario!= $user && $pass!= $pas){
+    echo "Usuario y contraseña incorrecta";}
+    elseif($usuario != $user){
+        echo "Usuario incorrecto";
+    }elseif($pass != $pas){
+        echo "Contraseña incorrecta";
+    }
+        
+
 ?>
 
 
